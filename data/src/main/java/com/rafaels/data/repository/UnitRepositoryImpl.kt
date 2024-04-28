@@ -1,13 +1,15 @@
 package com.rafaels.data.repository
 
-import com.rafaels.data.BuildConfig
 import com.rafaels.data.api.UnitApi
 import com.rafaels.data.error.ErrorHandler
+import com.rafaels.data.mapper.toUnitModel
+import com.rafaels.data.model.UnitDTO
 import com.rafaels.domain.Resource
 import com.rafaels.domain.UnitRepository
 import com.rafaels.domain.model.UnitModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.Response
 
 class UnitRepositoryImpl(
     private val api: UnitApi,
@@ -18,12 +20,12 @@ class UnitRepositoryImpl(
         withContext(Dispatchers.IO) {
             try {
 
-                val response = api.getUnit(0)
+                val response: Response<UnitDTO> = api.getUnit(0)
 
                 if (response.isSuccessful) {
                     //return@withContext Resource.Success(response.body()!!.toOompaLoompaModel())
                     return@withContext Resource.Success(
-                       UnitModel(0, "Teclis")
+                       response.body().toUnitModel()
                     )
                 } else {
                     /*return@withContext Resource.Error(
@@ -33,7 +35,7 @@ class UnitRepositoryImpl(
                         )
                     )*/
                     return@withContext Resource.Success(
-                        UnitModel(0, "Teclis")
+                        response.body().toUnitModel()
                     )
                 }
             } catch (e: Exception) {
