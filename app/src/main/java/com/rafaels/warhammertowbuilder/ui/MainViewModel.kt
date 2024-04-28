@@ -1,7 +1,9 @@
 package com.rafaels.warhammertowbuilder.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.rafaels.domain.Resource
 import com.rafaels.domain.usecase.GetUnit
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -9,7 +11,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    val getUnit: GetUnit,
+    private val getUnit: GetUnit,
 ): ViewModel() {
 
     private val _uiUnitState = MutableStateFlow(MainUiState())
@@ -22,7 +24,20 @@ class MainViewModel(
     private fun getUnit() {
         viewModelScope.launch {
             val result = getUnit.getUnit()
-            _uiUnitState.value = MainUiState(name = result.name)
+            when(result) {
+                is Resource.Success -> {
+                    result.data.let {
+                        _uiUnitState.value = MainUiState(name = it.name)
+                    }
+                    Log.d("MainViewModel", "Resource.Success")
+                }
+
+                is Resource.Error -> {
+                    //showError(result.error)
+                    Log.d("MainViewModel", "Resource.Error")
+                }
+            }
         }
     }
+
 }

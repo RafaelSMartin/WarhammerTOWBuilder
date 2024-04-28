@@ -1,5 +1,7 @@
 package com.rafaels.warhammertowbuilder.di
 
+import com.rafaels.data.RestClient
+import com.rafaels.data.error.ErrorHandler
 import com.rafaels.data.repository.UnitRepositoryImpl
 import com.rafaels.domain.UnitRepository
 import com.rafaels.domain.usecase.GetUnit
@@ -16,7 +18,7 @@ val domainModule = module {
 }
 
 val dataModule = module {
-    single<UnitRepository> { UnitRepositoryImpl(
-        //get()
-    ) }
+    single<UnitRepository> { UnitRepositoryImpl(get(), get()) }
+    single { RestClient.getUnitApi() }
+    single { ErrorHandler() }
 }
