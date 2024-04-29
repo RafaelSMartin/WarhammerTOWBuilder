@@ -1,5 +1,9 @@
 package com.rafaels.domain.model
 
+
+data class UnitModels(
+    val unitModels: List<UnitModel>
+)
 data class UnitModel(
     val id: Int,
     val unitType: UnitTypeModel,

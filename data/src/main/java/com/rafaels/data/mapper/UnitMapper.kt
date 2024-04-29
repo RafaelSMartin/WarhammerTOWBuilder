@@ -11,7 +11,12 @@ import com.rafaels.domain.model.ModelProfileModel
 import com.rafaels.domain.model.OtherModelInfoModel
 import com.rafaels.domain.model.TroopTypeModel
 import com.rafaels.domain.model.UnitModel
+import com.rafaels.domain.model.UnitModels
 import com.rafaels.domain.model.UnitTypeModel
+
+fun mapUnitModels(values: List<UnitDTO>): UnitModels {
+    return UnitModels(unitModels = values.map { it.toUnitModel() })
+}
 
 fun UnitDTO?.toUnitModel(): UnitModel =
     UnitModel(
@@ -73,7 +78,7 @@ fun TroopTypeDTO?.toTroopTypeModel(): TroopTypeModel =
     }
 
 fun BaseSizeDTO?.toBaseSizeModel(): BaseSizeModel =
-    when(this){
+    when (this) {
         BaseSizeDTO.SMALL_25x25 -> BaseSizeModel.SMALL_25x25
         BaseSizeDTO.MEDIUM_30x60 -> BaseSizeModel.MEDIUM_30x60
         BaseSizeDTO.MEDIUM_50x50 -> BaseSizeModel.MEDIUM_50x50

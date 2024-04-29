@@ -1,7 +1,7 @@
 package com.rafaels.domain
 
-import com.rafaels.domain.model.UnitModel
+import com.rafaels.domain.model.UnitModels
 
 interface UnitRepository {
-    suspend fun getUnit(): Resource<UnitModel>
+    suspend fun getUnit(): Resource<UnitModels>
 }

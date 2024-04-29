@@ -28,8 +28,9 @@ class MainViewModel(
             when(result) {
                 is Resource.Success -> {
                     result.data.let {
-                        _uiUnitState.value = MainUiState(
-                            name = StringBuilder()
+                        var nameList = ""
+                        it.unitModels.forEach{
+                            nameList += StringBuilder()
                                 .append(it.unitName)
                                 .append("\n")
                                 .append(it.unitType)
@@ -39,7 +40,10 @@ class MainViewModel(
                                 .append(it.otherModelInfo.baseSize.value)
                                 .append("\n")
                                 .append(it.otherModelInfo.unitSize)
-                                .toString())
+                                .append("\n\n")
+                                .toString()
+                        }
+                        _uiUnitState.value = MainUiState(name = nameList)
                     }
                     Log.d("MainViewModel", "Resource.Success")
                 }

@@ -1,0 +1,78 @@
+{
+  "current": 1,
+  "total": 3,
+  "results": [
+    {
+      "unitName": "Prince",
+      "unitType": "characters",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 7,
+        "ballisticSkill": 7,
+        "strength": 4,
+        "toughness": 3,
+        "wounds": 3,
+        "initiative": 6,
+        "attacks": 4,
+        "leadership": 10,
+        "basicPoint": 130
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 1
+      },
+      "equipment": [],
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Archmage",
+      "unitType": "characters",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 3,
+        "initiative": 5,
+        "attacks": 2,
+        "leadership": 8,
+        "basicPoint": 155
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 1
+      },
+      "equipment": [],
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Elven Spearmen",
+      "unitType": "core",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 4,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 9
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": [],
+      "options": [],
+      "specialRules": []
+    }
+  ]
+}

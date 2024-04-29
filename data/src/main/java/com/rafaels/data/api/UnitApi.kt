@@ -1,12 +1,12 @@
 package com.rafaels.data.api
 
-import com.rafaels.data.model.UnitDTO
+import com.rafaels.data.model.UnitResponseDTO
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface UnitApi {
 
-    @GET("napptilus/oompa-loompas/{id}")
-    suspend fun getUnit(@Path("id") id: Int): Response<UnitDTO>
+    @GET
+    suspend fun getUnit(@Path("id") id: Int): Response<UnitResponseDTO>
 }
