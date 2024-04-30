@@ -3,7 +3,10 @@ package com.rafaels.warhammertowbuilder.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -31,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     KoinAndroidContext(){
-                        Greeting()
+                        ArmyList()
                     }
 
                 }
@@ -41,21 +44,32 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(
+fun ArmyList(
     modifier: Modifier = Modifier,
-    mainViewModel: MainViewModel = koinViewModel(),
-) {
+             mainViewModel: MainViewModel = koinViewModel(),
+){
     val uiState by mainViewModel.uiUnitState.collectAsState()
-    Text(
-        text = uiState.name,
-        modifier = modifier
-    )
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+    ) {
+        uiState.units.forEach {
+            Text(
+                text = it.unitName,
+                modifier = modifier
+            )
+        }
+    }
 }
+
+
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     WarhammerTOWBuilderTheme {
-        Greeting()
+        ArmyList()
     }
 }
