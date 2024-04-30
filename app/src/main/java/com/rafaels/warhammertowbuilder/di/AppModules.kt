@@ -2,9 +2,11 @@ package com.rafaels.warhammertowbuilder.di
 
 import com.rafaels.data.RestClient
 import com.rafaels.data.error.ErrorHandler
+import com.rafaels.data.repository.MockRepositoryImpl
 import com.rafaels.data.repository.UnitRepositoryImpl
 import com.rafaels.domain.UnitRepository
 import com.rafaels.domain.usecase.GetUnit
+import com.rafaels.warhammertowbuilder.WarhammerTOWBuilderApplication
 import com.rafaels.warhammertowbuilder.ui.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -18,7 +20,10 @@ val domainModule = module {
 }
 
 val dataModule = module {
-    single<UnitRepository> { UnitRepositoryImpl(get(), get()) }
+    single<UnitRepository> {
+        if(WarhammerTOWBuilderApplication.IS_DEMO) MockRepositoryImpl(get())
+        else UnitRepositoryImpl(get(), get())
+    }
     single { RestClient.getUnitApi() }
     single { ErrorHandler() }
 }

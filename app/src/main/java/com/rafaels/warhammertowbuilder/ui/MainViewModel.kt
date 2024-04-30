@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.rafaels.domain.Resource
+import com.rafaels.domain.model.UnitModels
 import com.rafaels.domain.usecase.GetUnit
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -27,24 +28,7 @@ class MainViewModel(
             val result = getUnit.getUnit()
             when(result) {
                 is Resource.Success -> {
-                    result.data.let {
-                        var nameList = ""
-                        it.unitModels.forEach{
-                            nameList += StringBuilder()
-                                .append(it.unitName)
-                                .append("\n")
-                                .append(it.unitType)
-                                .append("\n")
-                                .append(it.otherModelInfo.troopType.value)
-                                .append("\n")
-                                .append(it.otherModelInfo.baseSize.value)
-                                .append("\n")
-                                .append(it.otherModelInfo.unitSize)
-                                .append("\n\n")
-                                .toString()
-                        }
-                        _uiUnitState.value = MainUiState(name = nameList)
-                    }
+                    createItems(result.data)
                     Log.d("MainViewModel", "Resource.Success")
                 }
 
@@ -53,6 +37,27 @@ class MainViewModel(
                     Log.d("MainViewModel", "Resource.Error")
                 }
             }
+        }
+    }
+
+    private fun createItems(items: UnitModels){
+        items.let {
+            var nameList = ""
+            it.unitModels.forEach{
+                nameList += StringBuilder()
+                    .append(it.unitName)
+                    .append("\n")
+                    .append(it.unitType)
+                    .append("\n")
+                    .append(it.otherModelInfo.troopType.value)
+                    .append("\n")
+                    .append(it.otherModelInfo.baseSize.value)
+                    .append("\n")
+                    .append(it.otherModelInfo.unitSize)
+                    .append("\n\n")
+                    .toString()
+            }
+            _uiUnitState.value = MainUiState(name = nameList)
         }
     }
 

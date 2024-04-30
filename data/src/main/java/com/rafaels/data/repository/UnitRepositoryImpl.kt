@@ -22,22 +22,15 @@ class UnitRepositoryImpl(
                 val response: Response<UnitResponseDTO> = api.getUnit(0)
 
                 if (response.isSuccessful) {
-                    //return@withContext Resource.Success(response.body()!!.toOompaLoompaModel())
                     return@withContext Resource.Success(
                        mapUnitModels(response.body()!!.results)
                     )
                 } else {
-                    /*return@withContext Resource.Error(
+                    return@withContext Resource.Error(
                         errorHandler(
                             response.code(),
                             response.errorBody()
                         )
-                    )*/
-                    //val file = File("./mock.json")
-
-
-                    return@withContext Resource.Success(
-                        mapUnitModels(response.body()!!.results)
                     )
                 }
             } catch (e: Exception) {

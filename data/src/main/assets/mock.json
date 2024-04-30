@@ -4,7 +4,7 @@
   "results": [
     {
       "unitName": "Prince",
-      "unitType": "characters",
+      "unitType": "Characters",
       "attributes": {
         "movement": 5,
         "weaponSkill": 7,
@@ -28,7 +28,7 @@
     },
     {
       "unitName": "Archmage",
-      "unitType": "characters",
+      "unitType": "Characters",
       "attributes": {
         "movement": 5,
         "weaponSkill": 4,
@@ -52,7 +52,7 @@
     },
     {
       "unitName": "Elven Spearmen",
-      "unitType": "core",
+      "unitType": "Core",
       "attributes": {
         "movement": 5,
         "weaponSkill": 4,
@@ -69,6 +69,30 @@
         "troopType": "regularInfantry",
         "baseSize": "25x25",
         "unitSize": 5
+      },
+      "equipment": [],
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Eagle-Claw Bolt Throwers",
+      "unitType": "Rare",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 6,
+        "wounds": 2,
+        "initiative": 4,
+        "attacks": 2,
+        "leadership": 8,
+        "basicPoint": 80
+      },
+      "otherModelInfo": {
+        "troopType": "WarMachine",
+        "baseSize": "50x50",
+        "unitSize": 1
       },
       "equipment": [],
       "options": [],

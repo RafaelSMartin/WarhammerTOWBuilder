@@ -12,13 +12,15 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
+import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
 class MainActivity : ComponentActivity() {
 
 
+    @OptIn(KoinExperimentalAPI::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -28,7 +30,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting()
+                    KoinAndroidContext(){
+                        Greeting()
+                    }
+
                 }
             }
         }
