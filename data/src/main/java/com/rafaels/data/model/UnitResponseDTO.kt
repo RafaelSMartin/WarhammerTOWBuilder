@@ -12,7 +12,7 @@ data class UnitDTO(
     val unitName: String,
     val attributes: ModelProfileDTO,
     val otherModelInfo: OtherModelInfoDTO,
-    val equipment: List<String>,
+    val equipment: String,
     val options: List<String>,
     val specialRules: List<String>,
 )

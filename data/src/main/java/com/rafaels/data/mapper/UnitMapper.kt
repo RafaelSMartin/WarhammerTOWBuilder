@@ -19,10 +19,10 @@ fun UnitDTO.toUnitModel(): UnitModel =
     UnitModel(
         id = id,
         unitType = unitType.toUnitTypeModel(),
-        unitName = this.unitName,
-        attributes = this.attributes.toModelProfileModel(),
-        otherModelInfo = this.otherModelInfo.toOtherProfileModel(),
-        equipment = emptyList(),
+        unitName = unitName,
+        attributes = attributes.toModelProfileModel(),
+        otherModelInfo = otherModelInfo.toOtherProfileModel(),
+        equipment = equipment,
         options = emptyList(),
         specialRules = emptyList(),
     )
@@ -40,23 +40,23 @@ fun String.toUnitTypeModel(): UnitTypeModel =
 
 fun ModelProfileDTO.toModelProfileModel(): ModelProfileModel =
     ModelProfileModel(
-        movement = this.movement,
-        weaponSkill = this.weaponSkill,
-        ballisticSkill = this.ballisticSkill,
-        strength = this.strength,
-        toughness = this.toughness,
-        wounds = this.wounds,
-        initiative = this.initiative,
-        attacks = this.attacks,
-        leadership = this.leadership,
-        basicPoint = this.basicPoint,
+        movement = movement,
+        weaponSkill = weaponSkill,
+        ballisticSkill = ballisticSkill,
+        strength = strength,
+        toughness = toughness,
+        wounds = wounds,
+        initiative = initiative,
+        attacks = attacks,
+        leadership = leadership,
+        basicPoint = basicPoint,
     )
 
 fun OtherModelInfoDTO.toOtherProfileModel(): OtherModelInfoModel =
     OtherModelInfoModel(
-        troopType = this.troopType.toTroopTypeModel(),
-        baseSize = this.baseSize.toBaseSizeModel(),
-        unitSize = this.unitSize,
+        troopType = troopType.toTroopTypeModel(),
+        baseSize = baseSize.toBaseSizeModel(),
+        unitSize = unitSize,
     )
 
 fun String.toTroopTypeModel(): TroopTypeModel =

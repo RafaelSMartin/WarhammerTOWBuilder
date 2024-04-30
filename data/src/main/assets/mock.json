@@ -22,7 +22,31 @@
         "baseSize": "25x25",
         "unitSize": 1
       },
-      "equipment": [],
+      "equipment": "Hand weapon and light armor",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Noble",
+      "unitType": "Characters",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 6,
+        "ballisticSkill": 6,
+        "strength": 4,
+        "toughness": 3,
+        "wounds": 2,
+        "initiative": 5,
+        "attacks": 3,
+        "leadership": 9,
+        "basicPoint": 70
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 1
+      },
+      "equipment": "Hand weapon and light armor",
       "options": [],
       "specialRules": []
     },
@@ -46,7 +70,79 @@
         "baseSize": "25x25",
         "unitSize": 1
       },
-      "equipment": [],
+      "equipment": "Hand weapon",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Mage",
+      "unitType": "Characters",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 2,
+        "initiative": 4,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 80
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 1
+      },
+      "equipment": "Hand weapon",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Dragon Mages",
+      "unitType": "Characters",
+      "attributes": {
+        "movement": 6,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 5,
+        "wounds": 6,
+        "initiative": 5,
+        "attacks": 2,
+        "leadership": 8,
+        "basicPoint": 275
+      },
+      "otherModelInfo": {
+        "troopType": "BehemothCharacter",
+        "baseSize": "60x100",
+        "unitSize": 1
+      },
+      "equipment": "Hand weapon and light armor",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "HandMaidens Of The Everqueen",
+      "unitType": "Characters",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 6,
+        "ballisticSkill": 7,
+        "strength": 4,
+        "toughness": 3,
+        "wounds": 2,
+        "initiative": 6,
+        "attacks": 2,
+        "leadership": 8,
+        "basicPoint": 65
+      },
+      "otherModelInfo": {
+        "troopType": "RegularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 1
+      },
+      "equipment": "Hand weapon, Handmaiden's spear, Bow of Avelorn and light armor",
       "options": [],
       "specialRules": []
     },
@@ -70,7 +166,127 @@
         "baseSize": "25x25",
         "unitSize": 5
       },
-      "equipment": [],
+      "equipment": "Hand weapon, thrusting spears, light armor and shields",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Elven Archers",
+      "unitType": "Core",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 4,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 10
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon and longbows",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Lothern Sea Guard",
+      "unitType": "Core",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 4,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 11
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, thrusting spears, warbows and light armor",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "White Lions Of Chrace",
+      "unitType": "Special",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 5,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 14
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, Chracian great blades and heavy armor",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Swordmasters Of Hoeth",
+      "unitType": "Special",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 6,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 6,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 14
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, swords of Hoeth and heavy armor",
+      "options": [],
+      "specialRules": []
+    },
+    {
+      "unitName": "Phoenix Guard",
+      "unitType": "Special",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 5,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 1,
+        "leadership": 9,
+        "basicPoint": 16
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, ceremonial halberds and full plate armor",
       "options": [],
       "specialRules": []
     },
@@ -94,7 +310,7 @@
         "baseSize": "50x50",
         "unitSize": 1
       },
-      "equipment": [],
+      "equipment": "",
       "options": [],
       "specialRules": []
     }

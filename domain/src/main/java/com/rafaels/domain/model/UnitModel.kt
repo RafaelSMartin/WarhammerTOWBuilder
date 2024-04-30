@@ -10,7 +10,7 @@ data class UnitModel(
     val unitName: String,
     val attributes: ModelProfileModel,
     val otherModelInfo: OtherModelInfoModel,
-    val equipment: List<String>,
+    val equipment: String,
     val options: List<String>,
     val specialRules: List<String>,
 )

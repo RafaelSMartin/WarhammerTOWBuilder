@@ -19,6 +19,7 @@ import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
+import java.lang.StringBuilder
 
 class MainActivity : ComponentActivity() {
 
@@ -57,7 +58,18 @@ fun ArmyList(
     ) {
         uiState.units.forEach {
             Text(
-                text = it.unitName,
+                text = StringBuilder()
+                    .append(it.unitName)
+                    .append("\n")
+                    .append(it.otherModelInfo.troopType.value)
+                    .append("\n")
+                    .append(it.otherModelInfo.baseSize.value)
+                    .append("\n")
+                    .append(it.otherModelInfo.unitSize)
+                    .append("\n")
+                    .append(it.equipment)
+                    .append("\n\n")
+                    .toString(),
                 modifier = modifier
             )
         }
