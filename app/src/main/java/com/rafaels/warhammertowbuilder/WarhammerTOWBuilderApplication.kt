@@ -8,7 +8,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
-class WarhammerTOWBuilderApplication: Application() {
+class WarhammerTOWBuilderApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -24,7 +24,7 @@ class WarhammerTOWBuilderApplication: Application() {
         }
     }
 
-    companion object{
+    companion object {
         const val IS_DEMO = true
     }
 
