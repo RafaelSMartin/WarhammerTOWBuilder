@@ -24,8 +24,4 @@ class WarhammerTOWBuilderApplication : Application() {
         }
     }
 
-    companion object {
-        const val IS_DEMO = true
-    }
-
 }
