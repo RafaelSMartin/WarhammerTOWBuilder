@@ -5,7 +5,7 @@ import com.rafaels.data.error.ErrorHandler
 import com.rafaels.data.mapper.mapUnitModels
 import com.rafaels.data.model.UnitResponseDTO
 import com.rafaels.domain.Resource
-import com.rafaels.domain.UnitRepository
+import com.rafaels.domain.repository.UnitRepository
 import com.rafaels.domain.model.UnitModels
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
