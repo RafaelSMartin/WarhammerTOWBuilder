@@ -3,23 +3,19 @@ package com.rafaels.warhammertowbuilder.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.rafaels.warhammertowbuilder.ui.UnitItem.UnitItemColumn
 import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
-import java.lang.StringBuilder
 
 class MainActivity : ComponentActivity() {
 
@@ -34,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    KoinAndroidContext(){
+                    KoinAndroidContext() {
                         ArmyList()
                     }
 
@@ -45,37 +41,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ArmyList(
-    modifier: Modifier = Modifier,
-             mainViewModel: MainViewModel = koinViewModel(),
-){
+fun ArmyList(mainViewModel: MainViewModel = koinViewModel()) {
     val uiState by mainViewModel.uiUnitState.collectAsState()
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState()),
-    ) {
-        uiState.units.forEach {
-            Text(
-                text = StringBuilder()
-                    .append(it.unitName)
-                    .append("\n")
-                    .append(it.otherModelInfo.troopType.value)
-                    .append("\n")
-                    .append(it.otherModelInfo.baseSize.value)
-                    .append("\n")
-                    .append(it.otherModelInfo.unitSize)
-                    .append("\n")
-                    .append(it.equipment)
-                    .append("\n\n")
-                    .toString(),
-                modifier = modifier
-            )
-        }
-    }
+    UnitItemColumn(uiState.units)
 }
-
 
 
 @Preview(showBackground = true)
