@@ -2,6 +2,7 @@ package com.rafaels.warhammertowbuilder.ui.UnitItem
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,7 +13,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import com.rafaels.domain.model.SpecialRuleModel
 import com.rafaels.domain.model.UnitModel
 
 @Composable
@@ -35,6 +41,7 @@ fun UnitItem(unit: UnitModel) {
     Text(text = unit.unitName)
     Text(text = "---------------------------------------")
     UnitItemProfile(unit)
+    UnitItemSpecialRules(unit.specialRules)
     Spacer(modifier = Modifier.height(120.dp))
 }
 
@@ -42,6 +49,7 @@ fun UnitItem(unit: UnitModel) {
 fun UnitItemProfile(unit: UnitModel) {
 
     Row {
+
         Box(Modifier.weight(0.30f)) {
             Text(text = unit.unitName)
         }
@@ -64,6 +72,22 @@ fun UnitItemProfile(unit: UnitModel) {
                 Text(text = "Points\n" + unit.attributes.basicPoint.toString())
             }
         }
-    }
 
+    }
+}
+
+@Composable
+fun UnitItemSpecialRules(specialRules: List<SpecialRuleModel>) {
+    Column {
+        specialRules.forEach { specialRule ->
+
+            // meter un decorador
+            Text(text = buildAnnotatedString {
+                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                    append(specialRule.rule + ": ")
+                }
+                append(specialRule.description + "\n")
+            })
+        }
+    }
 }

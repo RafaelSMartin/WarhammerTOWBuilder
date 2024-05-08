@@ -14,7 +14,7 @@ data class UnitDTO(
     val otherModelInfo: OtherModelInfoDTO,
     val equipment: String,
     val options: List<String>,
-    val specialRules: List<String>,
+    val specialRules: List<SpecialRulesDTO>,
 )
 
 data class ModelProfileDTO(
@@ -34,4 +34,9 @@ data class OtherModelInfoDTO(
     val troopType: String,
     val baseSize: String,
     val unitSize: Int,
+)
+
+data class SpecialRulesDTO(
+    val rule: String,
+    val description: String,
 )

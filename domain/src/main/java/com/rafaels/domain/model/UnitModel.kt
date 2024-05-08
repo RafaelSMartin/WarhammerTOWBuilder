@@ -12,7 +12,7 @@ data class UnitModel(
     val otherModelInfo: OtherModelInfoModel,
     val equipment: String,
     val options: List<String>,
-    val specialRules: List<String>,
+    val specialRules: List<SpecialRuleModel>,
 )
 
 enum class UnitTypeModel(val value: String? = "unknown") {
@@ -66,3 +66,8 @@ enum class BaseSizeModel(val value: String? = "unknown") {
     LARGE_60x100("60x100 mm"),
     UNKNOWN("unknown"),
 }
+
+data class SpecialRuleModel(
+    val rule: String,
+    val description: String,
+)

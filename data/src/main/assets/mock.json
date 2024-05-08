@@ -24,7 +24,20 @@
       },
       "equipment": "Hand weapon and light armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Ithilmar Weapons",
+          "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+        },
+        {
+          "rule": "Strike First",
+          "description": "+1 iniciativa, no a su montura"
+        },
+        {
+          "rule": "Valour of Ages",
+          "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+        }
+      ]
     },
     {
       "unitName": "Noble",
@@ -48,7 +61,20 @@
       },
       "equipment": "Hand weapon and light armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Ithilmar Weapons",
+          "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+        },
+        {
+          "rule": "Strike First",
+          "description": "+1 iniciativa, no a su montura"
+        },
+        {
+          "rule": "Valour of Ages",
+          "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+        }
+      ]
     },
     {
       "unitName": "Archmage",
@@ -72,7 +98,28 @@
       },
       "equipment": "Hand weapon",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Elven Reflexes",
+          "description": "Un modelo con esta regla especial (pero no su montura) tiene un modificador de +1 a su atributo de Iniciativa (hasta un máximo de 10) durante la primera ronda de cualquier combate."
+        },
+        {
+          "rule": "Ithilmar Weapons",
+          "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+        },
+        {
+          "rule": "Lileath's Blessing",
+          "description": "Uno por turno, un modelo con esta regla especial puede repetir una sola tirada de Lanzamiento fallida."
+        },
+        {
+          "rule": "Lore od Saphery",
+          "description": "Un mago con la regla espacial Lore of saphery puede descartar uno de sus hechizos generados aleatoriamente de forma normal. Cuando lo hacen, pueden seleccionar en su lugar el hechizo característico de su Saber de la Magia elegido o uno de los hechizos que se enumeran a continuación: Hand Of Khaine, Courage Of Aenarion or Vaul's Unmaking"
+        },
+        {
+          "rule": "Valour of Ages",
+          "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+        }
+      ]
     },
     {
       "unitName": "Mage",
@@ -96,7 +143,28 @@
       },
       "equipment": "Hand weapon",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Elven Reflexes",
+          "description": "Un modelo con esta regla especial (pero no su montura) tiene un modificador de +1 a su atributo de Iniciativa (hasta un máximo de 10) durante la primera ronda de cualquier combate."
+        },
+        {
+          "rule": "Ithilmar Weapons",
+          "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+        },
+        {
+          "rule": "Lileath's Blessing",
+          "description": "Uno por turno, un modelo con esta regla especial puede repetir una sola tirada de Lanzamiento fallida."
+        },
+        {
+          "rule": "Lore od Saphery",
+          "description": "Un mago con la regla espacial Lore of saphery puede descartar uno de sus hechizos generados aleatoriamente de forma normal. Cuando lo hacen, pueden seleccionar en su lugar el hechizo característico de su Saber de la Magia elegido o uno de los hechizos que se enumeran a continuación: Hand Of Khaine, Courage Of Aenarion or Vaul's Unmaking"
+        },
+        {
+          "rule": "Valour of Ages",
+          "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+        }
+      ]
     },
     {
       "unitName": "Dragon Mages",
@@ -120,7 +188,64 @@
       },
       "equipment": "Hand weapon and light armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Blessings of Asuryan",
+          "description": "Un modelo con esta regla especial tiene una salvación de protección de 5+ contra cualquier herida sufrida que haya sido causada por un ataque que tenga la regla especial de ataques flamígeros."
+        },
+        {
+          "rule": "Close Order",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Dragon Armour",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Elven Reflexes",
+          "description": "Un modelo con esta regla especial (pero no su montura) tiene un modificador de +1 a su atributo de Iniciativa (hasta un máximo de 10) durante la primera ronda de cualquier combate."
+        },
+        {
+          "rule": "Fly(10)",
+          "description": "Vuela 10 pulgadas."
+        },
+        {
+          "rule": "Impetuous",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Ithilmar Weapons",
+          "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+        },
+        {
+          "rule": "Large Target",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Lileath's Blessing",
+          "description": "Uno por turno, un modelo con esta regla especial puede repetir una sola tirada de Lanzamiento fallida."
+        },
+        {
+          "rule": "Lore od Saphery",
+          "description": "Un mago con la regla espacial Lore of saphery puede descartar uno de sus hechizos generados aleatoriamente de forma normal. Cuando lo hacen, pueden seleccionar en su lugar el hechizo característico de su Saber de la Magia elegido o uno de los hechizos que se enumeran a continuación: Hand Of Khaine, Courage Of Aenarion or Vaul's Unmaking"
+        },
+        {
+          "rule": "Stomp Attacks (D6)",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Swiftstride",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Terror",
+          "description": "Buscarla!!!."
+        },
+        {
+          "rule": "Valour of Ages",
+          "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+        }
+      ]
     },
     {
       "unitName": "HandMaidens Of The Everqueen",
@@ -144,7 +269,12 @@
       },
       "equipment": "Hand weapon, Handmaiden's spear, Bow of Avelorn and light armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Elven Spearmen",
@@ -168,7 +298,12 @@
       },
       "equipment": "Hand weapon, thrusting spears, light armor and shields",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Elven Archers",
@@ -192,7 +327,12 @@
       },
       "equipment": "Hand weapon and longbows",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Lothern Sea Guard",
@@ -216,7 +356,12 @@
       },
       "equipment": "Hand weapon, thrusting spears, warbows and light armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "White Lions Of Chrace",
@@ -240,7 +385,12 @@
       },
       "equipment": "Hand weapon, Chracian great blades and heavy armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Swordmasters Of Hoeth",
@@ -264,7 +414,12 @@
       },
       "equipment": "Hand weapon, swords of Hoeth and heavy armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Phoenix Guard",
@@ -288,7 +443,12 @@
       },
       "equipment": "Hand weapon, ceremonial halberds and full plate armor",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     },
     {
       "unitName": "Eagle-Claw Bolt Throwers",
@@ -312,7 +472,12 @@
       },
       "equipment": "",
       "options": [],
-      "specialRules": []
+      "specialRules": [
+        {
+          "rule": "Rule",
+          "description": "Description."
+        }
+      ]
     }
   ]
 }

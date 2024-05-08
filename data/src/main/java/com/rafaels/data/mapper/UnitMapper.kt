@@ -2,10 +2,12 @@ package com.rafaels.data.mapper
 
 import com.rafaels.data.model.ModelProfileDTO
 import com.rafaels.data.model.OtherModelInfoDTO
+import com.rafaels.data.model.SpecialRulesDTO
 import com.rafaels.data.model.UnitDTO
 import com.rafaels.domain.model.BaseSizeModel
 import com.rafaels.domain.model.ModelProfileModel
 import com.rafaels.domain.model.OtherModelInfoModel
+import com.rafaels.domain.model.SpecialRuleModel
 import com.rafaels.domain.model.TroopTypeModel
 import com.rafaels.domain.model.UnitModel
 import com.rafaels.domain.model.UnitModels
@@ -24,7 +26,7 @@ fun UnitDTO.toUnitModel(): UnitModel =
         otherModelInfo = otherModelInfo.toOtherProfileModel(),
         equipment = equipment,
         options = emptyList(),
-        specialRules = emptyList(),
+        specialRules = specialRules.toSpecialRulesModel(),
     )
 
 fun String.toUnitTypeModel(): UnitTypeModel =
@@ -83,3 +85,13 @@ fun String.toBaseSizeModel(): BaseSizeModel =
         "60x100" -> BaseSizeModel.LARGE_60x100
         else -> BaseSizeModel.UNKNOWN
     }
+
+
+fun List<SpecialRulesDTO>.toSpecialRulesModel(): List<SpecialRuleModel> {
+    return this.map { it.toSpecialRuleModel() }
+}
+fun SpecialRulesDTO.toSpecialRuleModel(): SpecialRuleModel =
+    SpecialRuleModel(
+        rule = rule,
+        description = description,
+    )
