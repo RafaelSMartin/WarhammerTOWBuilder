@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.UnitItem
+package com.rafaels.warhammertowbuilder.ui.unitItem
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

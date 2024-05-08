@@ -11,7 +11,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rafaels.warhammertowbuilder.ui.UnitItem.UnitItemColumn
+import com.rafaels.warhammertowbuilder.ui.unitItem.UnitItemColumn
 import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
