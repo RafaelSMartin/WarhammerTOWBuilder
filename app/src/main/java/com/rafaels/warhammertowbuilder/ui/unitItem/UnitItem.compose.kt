@@ -57,9 +57,8 @@ fun UnitItemProfile(unit: UnitModel) {
         Box(Modifier.weight(0.70f)) {
             Row(
                 modifier = Modifier.fillMaxSize(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-
-                ) {
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
                 Text(text = "M\n" + unit.attributes.movement.toString())
                 Text(text = "WS\n" + unit.attributes.weaponSkill.toString())
                 Text(text = "BS\n" + unit.attributes.ballisticSkill.toString())

@@ -23,7 +23,7 @@ class UnitRepositoryImpl(
 
                 if (response.isSuccessful) {
                     return@withContext Resource.Success(
-                       mapUnitModels(response.body()!!.results)
+                       mapUnitModels(response.body()!!)
                     )
                 } else {
                     return@withContext Resource.Error(

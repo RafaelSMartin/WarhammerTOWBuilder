@@ -4,6 +4,7 @@ import com.rafaels.data.model.ModelProfileDTO
 import com.rafaels.data.model.OtherModelInfoDTO
 import com.rafaels.data.model.SpecialRulesDTO
 import com.rafaels.data.model.UnitDTO
+import com.rafaels.data.model.UnitResponseDTO
 import com.rafaels.domain.model.BaseSizeModel
 import com.rafaels.domain.model.ModelProfileModel
 import com.rafaels.domain.model.OtherModelInfoModel
@@ -13,11 +14,11 @@ import com.rafaels.domain.model.UnitModel
 import com.rafaels.domain.model.UnitModels
 import com.rafaels.domain.model.UnitTypeModel
 
-fun mapUnitModels(values: List<UnitDTO>): UnitModels {
-    return UnitModels(unitModels = values.map { it.toUnitModel() })
+fun mapUnitModels(response: UnitResponseDTO): UnitModels {
+    return UnitModels(unitModels = response.codexUnits.map { it.toUnitModel(response.specialRulesDetails) })
 }
 
-fun UnitDTO.toUnitModel(): UnitModel =
+fun UnitDTO.toUnitModel(specialRulesDetails: List<SpecialRulesDTO>): UnitModel =
     UnitModel(
         id = id,
         unitType = unitType.toUnitTypeModel(),
@@ -26,7 +27,7 @@ fun UnitDTO.toUnitModel(): UnitModel =
         otherModelInfo = otherModelInfo.toOtherProfileModel(),
         equipment = equipment,
         options = emptyList(),
-        specialRules = specialRules.toSpecialRulesModel(),
+        specialRules = specialRulesDetails.toSpecialRulesModel(specialRules),
     )
 
 fun String.toUnitTypeModel(): UnitTypeModel =
@@ -86,12 +87,10 @@ fun String.toBaseSizeModel(): BaseSizeModel =
         else -> BaseSizeModel.UNKNOWN
     }
 
+fun List<SpecialRulesDTO>.toSpecialRulesModel(keys: List<String>): List<SpecialRuleModel> =
+    this.filter { it.rule in keys }.map { it.toSpecialRuleModel() }
 
-fun List<SpecialRulesDTO>.toSpecialRulesModel(): List<SpecialRuleModel> {
-    return this.map { it.toSpecialRuleModel() }
-}
+
 fun SpecialRulesDTO.toSpecialRuleModel(): SpecialRuleModel =
-    SpecialRuleModel(
-        rule = rule,
-        description = description,
-    )
+    SpecialRuleModel(rule = rule, description = description)
+

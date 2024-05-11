@@ -3,7 +3,8 @@ package com.rafaels.data.model
 data class UnitResponseDTO(
     val current: Int,
     val total: Int,
-    val results: List<UnitDTO>
+    val codexUnits: List<UnitDTO>,
+    val specialRulesDetails: List<SpecialRulesDTO>
 )
 
 data class UnitDTO(
@@ -14,7 +15,7 @@ data class UnitDTO(
     val otherModelInfo: OtherModelInfoDTO,
     val equipment: String,
     val options: List<String>,
-    val specialRules: List<SpecialRulesDTO>,
+    val specialRules: List<String>,
 )
 
 data class ModelProfileDTO(

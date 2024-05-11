@@ -10,7 +10,6 @@ import com.rafaels.domain.repository.UnitRepository
 import com.rafaels.domain.model.UnitModels
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.io.IOException
 
 class MockRepositoryImpl(
     private val context: Context,
@@ -22,7 +21,7 @@ class MockRepositoryImpl(
             val gson = Gson()
             val result = gson.fromJson(jsonFileString, UnitResponseDTO::class.java)
 
-            return@withContext Resource.Success(mapUnitModels(result.results))
+            return@withContext Resource.Success(mapUnitModels(result))
         }
 
 }
