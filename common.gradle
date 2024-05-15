@@ -5,7 +5,6 @@ android {
         compileSdk 34
 
         defaultConfig {
-            consumerProguardFiles "consumer-rules.pro"
         }
 
         release {

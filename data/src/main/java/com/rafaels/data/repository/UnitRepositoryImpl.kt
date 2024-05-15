@@ -3,7 +3,7 @@ package com.rafaels.data.repository
 import com.rafaels.data.api.UnitApi
 import com.rafaels.data.error.ErrorHandler
 import com.rafaels.data.mapper.mapUnitModels
-import com.rafaels.data.model.UnitResponseDTO
+import com.rafaels.data.model.RemoteResponseDTO
 import com.rafaels.domain.Resource
 import com.rafaels.domain.repository.UnitRepository
 import com.rafaels.domain.model.UnitModels
@@ -19,7 +19,7 @@ class UnitRepositoryImpl(
     override suspend fun getUnit(): Resource<UnitModels> =
         withContext(Dispatchers.IO) {
             try {
-                val response: Response<UnitResponseDTO> = api.getUnit(0)
+                val response: Response<RemoteResponseDTO> = api.getUnit(0)
 
                 if (response.isSuccessful) {
                     return@withContext Resource.Success(

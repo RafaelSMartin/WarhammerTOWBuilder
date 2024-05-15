@@ -26,7 +26,11 @@ class MainViewModel(
             val result = getUnit.getUnit()
             when(result) {
                 is Resource.Success -> {
-                    _uiUnitState.value = MainUiState(units = result.data.unitModels)
+                    _uiUnitState.value = MainUiState(
+                        units = result.data.unitModels,
+                        specialRules = result.data.specialRuleModel,
+                        elvenHonours = result.data.elvenHonours
+                    )
                     Log.d("MainViewModel", "Resource.Success")
                 }
 

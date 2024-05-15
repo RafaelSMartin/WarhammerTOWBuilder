@@ -1,10 +1,18 @@
 package com.rafaels.data.model
 
-data class UnitResponseDTO(
+data class RemoteResponseDTO(
     val current: Int,
     val total: Int,
-    val codexUnits: List<UnitDTO>,
-    val specialRulesDetails: List<SpecialRulesDTO>
+    val result: ResultDTO,
+)
+
+data class ResultDTO(
+    val characters: List<UnitDTO>,
+    val core: List<UnitDTO>,
+    val special: List<UnitDTO>,
+    val rare: List<UnitDTO>,
+    val specialRulesDetails: List<SpecialRulesDTO>,
+    val elvenHonours: List<ElvenHonoursDTO>,
 )
 
 data class UnitDTO(
@@ -40,4 +48,11 @@ data class OtherModelInfoDTO(
 data class SpecialRulesDTO(
     val rule: String,
     val description: String,
+)
+
+data class ElvenHonoursDTO(
+    val honour: String,
+    val honourPoints: Int,
+    val honourDescription: String,
+    val addSpecialRules: List<String>
 )

@@ -1,13 +1,18 @@
 package com.rafaels.domain.model
 
+import androidx.annotation.DrawableRes
+
 
 data class UnitModels(
-    val unitModels: List<UnitModel>
+    val unitModels: List<UnitModel>,
+    val specialRuleModel: List<SpecialRuleModel>,
+    val elvenHonours: List<ElvenHonourModel>,
 )
 data class UnitModel(
     val id: Int,
     val unitType: UnitTypeModel,
     val unitName: String,
+    @DrawableRes val unitImage: Int? = null,
     val attributes: ModelProfileModel,
     val otherModelInfo: OtherModelInfoModel,
     val equipment: String,
@@ -70,4 +75,11 @@ enum class BaseSizeModel(val value: String? = "unknown") {
 data class SpecialRuleModel(
     val rule: String,
     val description: String,
+)
+
+data class ElvenHonourModel(
+    val honour: String,
+    val honourPoints: Int,
+    val honourDescription: String,
+    val addSpecialRules: List<String>
 )

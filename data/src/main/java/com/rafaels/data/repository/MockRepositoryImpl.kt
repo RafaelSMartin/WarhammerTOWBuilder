@@ -4,7 +4,7 @@ import android.content.Context
 import com.google.gson.Gson
 import com.rafaels.data.extensions.getJsonDataFromAsset
 import com.rafaels.data.mapper.mapUnitModels
-import com.rafaels.data.model.UnitResponseDTO
+import com.rafaels.data.model.RemoteResponseDTO
 import com.rafaels.domain.Resource
 import com.rafaels.domain.repository.UnitRepository
 import com.rafaels.domain.model.UnitModels
@@ -17,9 +17,9 @@ class MockRepositoryImpl(
 
     override suspend fun getUnit(): Resource<UnitModels> =
         withContext(Dispatchers.IO) {
-            val jsonFileString = context.getJsonDataFromAsset("mock.json")
+            val jsonFileString = context.getJsonDataFromAsset("mock2.json")
             val gson = Gson()
-            val result = gson.fromJson(jsonFileString, UnitResponseDTO::class.java)
+            val result = gson.fromJson(jsonFileString, RemoteResponseDTO::class.java)
 
             return@withContext Resource.Success(mapUnitModels(result))
         }

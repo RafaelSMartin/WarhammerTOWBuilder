@@ -1,9 +1,8 @@
 {
   "current": 1,
   "total": 3,
-  "codexUnits": [
+  "result": [
     {
-      "id": 1,
       "unitName": "High Elf Prince",
       "unitType": "Characters",
       "attributes": {
@@ -32,7 +31,6 @@
       ]
     },
     {
-      "id": 2,
       "unitName": "Archmage",
       "unitType": "Characters",
       "attributes": {
@@ -63,7 +61,6 @@
       ]
     },
     {
-      "id": 3,
       "unitName": "Dragon Mages",
       "unitType": "Characters",
       "attributes": {
@@ -103,7 +100,6 @@
       ]
     },
     {
-      "id": 4,
       "unitName": "HandMaiden Of The Everqueen",
       "unitType": "Characters",
       "attributes": {
@@ -136,7 +132,6 @@
       ]
     },
     {
-      "id": 5,
       "unitName": "High Elf Noble",
       "unitType": "Characters",
       "attributes": {
@@ -165,7 +160,6 @@
       ]
     },
     {
-      "id": 6,
       "unitName": "Mage",
       "unitType": "Characters",
       "attributes": {
@@ -196,7 +190,6 @@
       ]
     },
     {
-      "id": 7,
       "unitName": "Elven Spearmen",
       "unitType": "Core",
       "attributes": {
@@ -227,7 +220,6 @@
       ]
     },
     {
-      "id": 8,
       "unitName": "Elven Archers",
       "unitType": "Core",
       "attributes": {
@@ -385,6 +377,172 @@
       ]
     },
     {
+      "unitName": "Shadow Warriors",
+      "unitType": "Special",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 5,
+        "ballisticSkill": 5,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 14
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, longbows and light armor",
+      "options": [],
+      "specialRules": [
+        "Elven Reflexes",
+        "Evasive",
+        "Fire & Flee",
+        "Ithilmar Weapons",
+        "Move through Cover",
+        "Scouts",
+        "Skirmishers",
+        "Veteran",
+        "Warriors of Nagarythe"
+      ]
+    },
+    {
+      "unitName": "Sisters Of Avelorn",
+      "unitType": "Rare",
+      "attributes": {
+        "movement": 5,
+        "weaponSkill": 5,
+        "ballisticSkill": 5,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 15
+      },
+      "otherModelInfo": {
+        "troopType": "regularInfantry",
+        "baseSize": "25x25",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, bows of Avelorn and light armor",
+      "options": [],
+      "specialRules": [
+        "Arrows of Isha",
+        "Evasive",
+        "Ignores Cover",
+        "Immune to Psychology",
+        "Ithilmar Armour",
+        "Ithilmar Weapons",
+        "Open Order",
+        "Skirmishers",
+        "Strike First"
+      ]
+    },
+    {
+      "unitName": "Ellyrian Reavers",
+      "unitType": "Core",
+      "attributes": {
+        "movement": 9,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 4,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 16
+      },
+      "otherModelInfo": {
+        "troopType": "lightCavalry",
+        "baseSize": "30x60",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon,cavalry spears and light armor",
+      "options": [],
+      "specialRules": [
+        "Elven Reflexes",
+        "Fast Cavalry",
+        "Open Order",
+        "Swiftstride",
+        "Valour of Ages"
+      ]
+    },
+    {
+      "unitName": "Silver Helms",
+      "unitType": "Core",
+      "attributes": {
+        "movement": 8,
+        "weaponSkill": 4,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 1,
+        "leadership": 8,
+        "basicPoint": 23
+      },
+      "otherModelInfo": {
+        "troopType": "heavyCavalry",
+        "baseSize": "30x60",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, lances and heavy armor",
+      "options": [],
+      "specialRules": [
+        "Close Order",
+        "Elven Reflexes",
+        "First Charge",
+        "Ithilmar Barding",
+        "Swiftstride",
+        "Valour of Ages"
+      ]
+    },
+    {
+      "unitName": "Dragon Princes",
+      "unitType": "Special",
+      "attributes": {
+        "movement": 8,
+        "weaponSkill": 5,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "toughness": 3,
+        "wounds": 1,
+        "initiative": 5,
+        "attacks": 2,
+        "leadership": 9,
+        "basicPoint": 37
+      },
+      "otherModelInfo": {
+        "troopType": "heavyCavalry",
+        "baseSize": "30x60",
+        "unitSize": 5
+      },
+      "equipment": "Hand weapon, lances, full plate armor and shields",
+      "options": [],
+      "specialRules": [
+        "Close Order",
+        "Counter Charge",
+        "Dragon Armour",
+        "Drilled",
+        "Elven Reflexes",
+        "First Charge",
+        "Impetuous",
+        "Ithilmar Barding",
+        "Ithilmar Weapons",
+        "Sons of Caledor",
+        "Swiftstride",
+        "Valour of Ages"
+      ]
+    },
+    {
       "unitName": "Eagle-Claw Bolt Throwers",
       "unitType": "Rare",
       "attributes": {
@@ -435,6 +593,10 @@
       "description": "A una unidad con esta regla especial solo puede unirse el general de tu ejército o un personaje con el honor élfico cazador de Cracia."
     },
     {
+      "rule": "Counter Charge",
+      "description": "."
+    },
+    {
       "rule": "Deflect Shots",
       "description": "Un modelo con esta regla especial tiene una salvación de Protección de 6+ contra cualquier herida sufrida que haya sido causada por un ataque de disparo no mágico."
     },
@@ -447,12 +609,28 @@
       "description": "Un modelo con esta regla especial tiene 6+ de salvación contra cualquier herida sufrida. Además, un mago con esta regla especial puede usar armadura sin penalización."
     },
     {
+      "rule": "Drilled",
+      "description": "Description."
+    },
+    {
       "rule": "Elven Reflexes",
       "description": "Un modelo con esta regla especial (pero no su montura) tiene un modificador de +1 a su atributo de Iniciativa (hasta un máximo de 10) durante la primera ronda de cualquier combate."
     },
     {
       "rule": "Evasive",
       "description": "Uno por turno, cuando esta unidad es declarada objetivo durante la fase de Disparo enemiga, puede optar por Retroceder en Buen Orden y huirá directamente lejos de la unidad enemiga que le dispara. Una vez que esta unidad haya completado su movimiento, la unidad enemiga podrá continuar disparando según lo indicado."
+    },
+    {
+      "rule": "Fast Cavalry",
+      "description": ""
+    },
+    {
+      "rule": "Fire & Flee",
+      "description": ""
+    },
+    {
+      "rule": "First Charge",
+      "description": ""
     },
     {
       "rule": "Fly(10)",
@@ -468,10 +646,14 @@
     },
     {
       "rule": "Impetuous",
-      "description": "Buscarla!!!."
+      "description": "Si durante la subfase de Declarar Cargas y Reacciones de Carga de su turno, una unidad que incluye una o más miniaturas Impetuous es capaz de declarar carga, tira 1D6. Con una tirada de 1 a 3, la unidad debe declarar una carga. Con una tirada de 4+, la unidad puede actuar normalmente."
     },
     {
       "rule": "Ithilmar Armour",
+      "description": "-> Un modelo con esta regla especial puede repetir cualquier tirada de 1 al realizar una prueba de terreno peligroso. Además, un mago con esta regla especial puede llevar armadura sin penalización."
+    },
+    {
+      "rule": "Ithilmar Barding",
       "description": "-> Un modelo con esta regla especial puede repetir cualquier tirada de 1 al realizar una prueba de terreno peligroso. Además, un mago con esta regla especial puede llevar armadura sin penalización."
     },
     {
@@ -499,10 +681,6 @@
       "description": "Un mago con la regla espacial Lore of saphery puede descartar uno de sus hechizos generados aleatoriamente de forma normal. Cuando lo hacen, pueden seleccionar en su lugar el hechizo característico de su Saber de la Magia elegido o uno de los hechizos que se enumeran a continuación: Hand Of Khaine, Courage Of Aenarion or Vaul's Unmaking"
     },
     {
-      "rule": "Impetuous",
-      "description": "Si durante la subfase de Declarar Cargas y Reacciones de Carga de su turno, una unidad que incluye una o más miniaturas Impetuous es capaz de declarar carga, tira 1D6. Con una tirada de 1 a 3, la unidad debe declarar una carga. Con una tirada de 4+, la unidad puede actuar normalmente."
-    },
-    {
       "rule": "Magic Resistance (-1)",
       "description": "La tirada de lanzamiento de cualquier hechizo enemigo (incluidos Bound spells) que tenga como objetivo una unidad que incluya una o más miniaturas con esta regla especial sufre un modificador, como se muestra entre paréntesis después del nombre de esta regla especial (se muestra como '-X'). .\nTenga en cuenta que esta regla especial no es acumulativa. Si dos o más miniaturas en una unidad tienen esta regla especial, usa el modificador más alto."
     },
@@ -527,7 +705,19 @@
       "description": "Description."
     },
     {
+      "rule": "Scouts",
+      "description": "Description."
+    },
+    {
+      "rule": "Sons of Caledor",
+      "description": "A una unidad con esta regla especial solo puede unirse el general de tu ejército o un personaje con el honor élfico Sangre de Caledor."
+    },
+    {
       "rule": "Skirmishers",
+      "description": "Description."
+    },
+    {
+      "rule": "Swiftstride",
       "description": "Description."
     },
     {
@@ -553,6 +743,10 @@
     {
       "rule": "Valour of Ages",
       "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
+    },
+    {
+      "rule": "Warriors of Nagarythe",
+      "description": "A una unidad con esta regla especial solo se le puede unir un personaje con el honor Élfico Acechador de las Sombras."
     },
     {
       "rule": "Warriors of the White Tower",

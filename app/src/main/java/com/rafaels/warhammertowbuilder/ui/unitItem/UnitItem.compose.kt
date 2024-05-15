@@ -1,5 +1,6 @@
 package com.rafaels.warhammertowbuilder.ui.unitItem
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +14,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -20,15 +24,14 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.rafaels.domain.model.SpecialRuleModel
 import com.rafaels.domain.model.UnitModel
+import com.rafaels.warhammertowbuilder.ui.mapImageDrawable
 
 @Composable
 fun UnitItemColumn(
     unitModels: List<UnitModel>,
 ) {
     LazyColumn(
-        Modifier
-            .fillMaxSize()
-            .padding(16.dp)
+        Modifier.padding(16.dp)
     ) {
         items(unitModels) {
             UnitItem(it)
@@ -38,18 +41,29 @@ fun UnitItemColumn(
 
 @Composable
 fun UnitItem(unit: UnitModel) {
-    Text(text = unit.unitName)
-    Text(text = "---------------------------------------")
-    UnitItemProfile(unit)
-    UnitItemSpecialRules(unit.specialRules)
-    Spacer(modifier = Modifier.height(120.dp))
+    Box {
+        Image(
+            painter = painterResource(id = mapImageDrawable(unit.unitName)),
+            contentDescription = "null",
+            modifier = Modifier
+                .matchParentSize()
+                .alpha(0.25f),
+            contentScale = ContentScale.Crop
+        )
+        Column {
+            Text(text = unit.unitName)
+            Text(text = "---------------------------------------")
+            UnitItemProfile(unit)
+            UnitItemSpecialRules(unit.specialRules)
+            Spacer(modifier = Modifier.height(120.dp))
+        }
+    }
 }
 
 @Composable
 fun UnitItemProfile(unit: UnitModel) {
 
     Row {
-
         Box(Modifier.weight(0.30f)) {
             Text(text = unit.unitName)
         }
@@ -77,7 +91,7 @@ fun UnitItemProfile(unit: UnitModel) {
 
 @Composable
 fun UnitItemSpecialRules(specialRules: List<SpecialRuleModel>) {
-    Column {
+    Column(Modifier.padding(vertical = 8.dp)) {
         specialRules.forEach { specialRule ->
 
             // meter un decorador
