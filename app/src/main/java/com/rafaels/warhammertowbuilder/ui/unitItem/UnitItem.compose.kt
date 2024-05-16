@@ -7,12 +7,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.layout.ContentScale
@@ -22,16 +25,30 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.rafaels.domain.model.SpecialRuleModel
 import com.rafaels.domain.model.UnitModel
+import com.rafaels.warhammertowbuilder.ui.MainViewModel
 import com.rafaels.warhammertowbuilder.ui.mapImageDrawable
+import org.koin.androidx.compose.koinViewModel
+
+
+@Composable
+fun ArmyList(navController: NavController, mainViewModel: MainViewModel = koinViewModel()) {
+    val uiState by mainViewModel.uiUnitState.collectAsState()
+
+    UnitItemColumn(unitModels = uiState.units)
+
+}
 
 @Composable
 fun UnitItemColumn(
     unitModels: List<UnitModel>,
 ) {
     LazyColumn(
-        Modifier.padding(16.dp)
+        Modifier
+            .fillMaxSize()
+            .padding(16.dp)
     ) {
         items(unitModels) {
             UnitItem(it)
@@ -55,7 +72,7 @@ fun UnitItem(unit: UnitModel) {
             Text(text = "---------------------------------------")
             UnitItemProfile(unit)
             UnitItemSpecialRules(unit.specialRules)
-            Spacer(modifier = Modifier.height(120.dp))
+            Spacer(modifier = Modifier.height(8.dp))
         }
     }
 }
@@ -70,7 +87,7 @@ fun UnitItemProfile(unit: UnitModel) {
 
         Box(Modifier.weight(0.70f)) {
             Row(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(text = "M\n" + unit.attributes.movement.toString())

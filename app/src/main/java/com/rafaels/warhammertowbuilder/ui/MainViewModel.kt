@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val getUnit: GetUnit,
-): ViewModel() {
+) : ViewModel() {
 
     private val _uiUnitState = MutableStateFlow(MainUiState())
     val uiUnitState: StateFlow<MainUiState> = _uiUnitState.asStateFlow()
@@ -24,7 +24,7 @@ class MainViewModel(
     private fun getUnit() {
         viewModelScope.launch {
             val result = getUnit.getUnit()
-            when(result) {
+            when (result) {
                 is Resource.Success -> {
                     _uiUnitState.value = MainUiState(
                         units = result.data.unitModels,
@@ -41,7 +41,6 @@ class MainViewModel(
             }
         }
     }
-
 
 
 }
