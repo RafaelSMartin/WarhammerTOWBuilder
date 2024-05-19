@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,12 +13,23 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
@@ -33,22 +45,55 @@ import com.rafaels.warhammertowbuilder.ui.mapImageDrawable
 import org.koin.androidx.compose.koinViewModel
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ArmyList(navController: NavController, mainViewModel: MainViewModel = koinViewModel()) {
+fun ArmyList(
+    navController: NavController,
+    mainViewModel: MainViewModel = koinViewModel()
+) {
     val uiState by mainViewModel.uiUnitState.collectAsState()
 
-    UnitItemColumn(unitModels = uiState.units)
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primaryContainer,
+                    titleContentColor = MaterialTheme.colorScheme.primary,
+                ),
+                title = {
+                    Text("ArmyList")
+                },
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = null
+                        )
+                    }
+                }
+            )
+        },
+        content = { paddingValues ->
+            UnitItemColumn(
+                navController = navController,
+                paddingValues = paddingValues,
+                unitModels = uiState.units
+            )
+        }
+    )
 
 }
 
 @Composable
 fun UnitItemColumn(
     unitModels: List<UnitModel>,
+    navController: NavController,
+    paddingValues: PaddingValues,
 ) {
     LazyColumn(
         Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(paddingValues)
     ) {
         items(unitModels) {
             UnitItem(it)
@@ -58,7 +103,7 @@ fun UnitItemColumn(
 
 @Composable
 fun UnitItem(unit: UnitModel) {
-    Box {
+    Box(modifier = Modifier.padding(16.dp)) {
         Image(
             painter = painterResource(id = mapImageDrawable(unit.unitName)),
             contentDescription = "null",
