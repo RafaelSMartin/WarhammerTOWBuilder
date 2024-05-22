@@ -73,6 +73,7 @@ fun OtherModelInfoDTO.toOtherProfileModel(): OtherModelInfoModel =
         troopType = troopType.toTroopTypeModel(),
         baseSize = baseSize.toBaseSizeModel(),
         unitSize = unitSize,
+        armourValue = armourValue,
     )
 
 fun String.toTroopTypeModel(): TroopTypeModel =

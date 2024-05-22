@@ -47,6 +47,7 @@ data class OtherModelInfoModel(
     val troopType: TroopTypeModel,
     val baseSize: BaseSizeModel,
     val unitSize: Int,
+    val armourValue: String?
 )
 
 enum class TroopTypeModel(val value: String? = "unknown") {

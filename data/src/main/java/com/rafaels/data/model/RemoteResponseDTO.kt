@@ -43,6 +43,7 @@ data class OtherModelInfoDTO(
     val troopType: String,
     val baseSize: String,
     val unitSize: Int,
+    val armourValue: String?,
 )
 
 data class SpecialRulesDTO(
