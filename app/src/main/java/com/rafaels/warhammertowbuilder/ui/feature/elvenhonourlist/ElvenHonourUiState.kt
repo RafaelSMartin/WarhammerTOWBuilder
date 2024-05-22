@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.elvenhonourlist
+package com.rafaels.warhammertowbuilder.ui.feature.elvenhonourlist
 
 import com.rafaels.domain.model.ElvenHonourModel
 

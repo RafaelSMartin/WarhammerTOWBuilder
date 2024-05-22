@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.screen
+package com.rafaels.warhammertowbuilder.ui.feature.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,14 +19,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import com.rafaels.warhammertowbuilder.ui.MainViewModel
 import com.rafaels.warhammertowbuilder.ui.navigation.AppScreens
 import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Home(navController: NavController, mainViewModel: MainViewModel = koinViewModel()) {
-    val uiState by mainViewModel.uiUnitState.collectAsState()
+fun Home(navController: NavController, homeViewModel: HomeViewModel = koinViewModel()) {
+    val uiState by homeViewModel.uiUnitState.collectAsState()
 
     Scaffold(
         topBar = {
@@ -56,8 +55,17 @@ private fun BodyContent(navController: NavController, paddingValues: PaddingValu
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route) }) {
-            Text(text = "Units")
+        Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route + "/Characters") }) {
+            Text(text = "Characters")
+        }
+        Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route + "/Core") }) {
+            Text(text = "Core")
+        }
+        Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route + "/Special") }) {
+            Text(text = "Special")
+        }
+        Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route + "/Rare") }) {
+            Text(text = "Rare")
         }
 
         Button(onClick = { navController.navigate(route = AppScreens.ElvenHonourScreen.route) }) {

@@ -62,7 +62,7 @@
         ]
       },
       {
-        "unitName": "Dragon Mages",
+        "unitName": "Dragon Mage",
         "unitType": "Characters",
         "attributes": {
           "movement": 6,
@@ -512,6 +512,38 @@
           "Swiftstride",
           "Valour of Ages"
         ]
+      },
+      {
+        "unitName": "Tiranoc Chariots",
+        "unitType": "Special",
+        "attributes": {
+          "movement": 9,
+          "weaponSkill": 4,
+          "ballisticSkill": 4,
+          "strength": 5,
+          "toughness": 4,
+          "wounds": 4,
+          "initiative": 4,
+          "attacks": 1,
+          "leadership": 8,
+          "basicPoint": 75
+        },
+        "otherModelInfo": {
+          "troopType": "lightChariot",
+          "baseSize": "50x100",
+          "unitSize": 4,
+          "armourValue": "5+"
+        },
+        "equipment": "Hand weapon, cavalry spears, longbows and Hooves (cuenta como arma de mano)",
+        "options": [],
+        "specialRules": [
+          "Elven Reflexes",
+          "Impact Hits (D6)",
+          "Open Order",
+          "Quick Shot",
+          "Swiftstride",
+          "Valour of Ages"
+        ]
       }
     ],
     "rare": [
@@ -550,6 +582,72 @@
         ]
       },
       {
+        "unitName": "Lion Chariot Of Chrace",
+        "unitType": "Rare",
+        "attributes": {
+          "movement": 8,
+          "weaponSkill": 5,
+          "ballisticSkill": 4,
+          "strength": 5,
+          "toughness": 4,
+          "wounds": 4,
+          "initiative": 4,
+          "attacks": 1,
+          "leadership": 8,
+          "basicPoint": 125
+        },
+        "otherModelInfo": {
+          "troopType": "heavyChariot",
+          "baseSize": "50x100",
+          "unitSize": 1,
+          "armourValue": "4+"
+        },
+        "equipment": "Hand weapon and Chracian great blades, Clawn and fangs (cuenta como arma de mano)",
+        "options": [],
+        "specialRules": [
+          "Close Order",
+          "Elven Reflexes",
+          "Fear",
+          "First Charge",
+          "Impact Hits (D6)",
+          "Lion Cloak",
+          "Stubborn",
+          "Valour of Ages"
+        ]
+      },
+      {
+        "unitName": "Lothern Skycutters ****falta por meter en el modelo",
+        "unitType": "Rare",
+        "attributes": {
+          "movement": 2,
+          "weaponSkill": 4,
+          "ballisticSkill": 4,
+          "strength": 5,
+          "toughness": 4,
+          "wounds": 4,
+          "initiative": 4,
+          "attacks": 1,
+          "leadership": 8,
+          "basicPoint": 90
+        },
+        "otherModelInfo": {
+          "troopType": "heavyChariot",
+          "baseSize": "60x100",
+          "unitSize": 1,
+          "armourValue": "4+"
+        },
+        "equipment": "Hand weapon, cavalry spears and shortbows, Wicked claws (cuenta como arma de mano)",
+        "options": [],
+        "specialRules": [
+          "Close Order",
+          "Fly(10)",
+          "Elven Reflexes",
+          "Impact Hits (D3+1)",
+          "Swiftstride",
+          "Valour of Ages"
+        ]
+      },
+      {
         "unitName": "Eagle-Claw Bolt Throwers",
         "unitType": "Rare",
         "attributes": {
@@ -579,6 +677,10 @@
       }
     ],
     "specialRulesDetails": [
+      {
+        "rule": "Ambushers",
+        "description": "description"
+      },
       {
         "rule": "Arrows of Isha",
         "description": "Cualquier arco (arco largo, arco corto, arco de guerra o Arco de Avelorn) llevado por una miniatura con esta regla especial tiene la regla especial Armor Bane (1) y un atributo Armor Piercing de -1."
@@ -652,6 +754,14 @@
         "description": "Si la mayoría de las miniaturas de una unidad son inmunes a la Psicología, la unidad supera automáticamente cualquier prueba de Miedo, Pánico o Terror que deba realizar. Sin embargo, si la mayoría de las miniaturas de una unidad tienen esta regla especial, la unidad no puede elegir Huir como reacción de carga."
       },
       {
+        "rule": "Impact Hits (D6)",
+        "description": "description"
+      },
+      {
+        "rule": "Impact Hits (D3+1)",
+        "description": "description"
+      },
+      {
         "rule": "Impetuous",
         "description": "Si durante la subfase de Declarar Cargas y Reacciones de Carga de su turno, una unidad que incluye una o más miniaturas Impetuous es capaz de declarar carga, tira 1D6. Con una tirada de 1 a 3, la unidad debe declarar una carga. Con una tirada de 4+, la unidad puede actuar normalmente."
       },
@@ -666,6 +776,10 @@
       {
         "rule": "Ithilmar Weapons",
         "description": "Cuando está en combate, una miniatura con esta regla especial que esté luchando con un arma de mano puede repetir sus tiradas para impactar con un 1 natural.\nTen en cuenta que esta regla especial solo se aplica a un arma de mano única y no mágica y no se aplica a la montura de un modelo (si tuviera una). Si la miniatura utiliza armas de dos manos o cualquier otro tipo de arma, esta regla especial deja de aplicarse."
+      },
+      {
+        "rule": "Killing Blow",
+        "description": "description"
       },
       {
         "rule": "King's Guard",
@@ -705,7 +819,15 @@
       },
       {
         "rule": "Open Order",
-        "description": "."
+        "description": "description"
+      },
+      {
+        "rule": "Quick Shot",
+        "description": "description"
+      },
+      {
+        "rule": "Rallying Cry",
+        "description": "description"
       },
       {
         "rule": "Regimental Unit",
@@ -724,10 +846,6 @@
         "description": "Description."
       },
       {
-        "rule": "Swiftstride",
-        "description": "Description."
-      },
-      {
         "rule": "Stomp Attacks (D6)",
         "description": "Un D6 de ataques de pisotón."
       },
@@ -741,7 +859,7 @@
       },
       {
         "rule": "Swiftstride",
-        "description": "Buscarla!!!."
+        "description": "Description"
       },
       {
         "rule": "Terror",
@@ -773,6 +891,73 @@
           "Ithilmar Armour",
           "Lileath's Blessing",
           "Lore of Saphery"
+        ]
+      },
+      {
+        "honour": "Shadow Stalker",
+        "honourPoints": 20,
+        "honourDescription": "Un personaje con el honor Élfico Acechador de las Sombras:\n- No se puede montar.\n- Puede estar equipado con un arco de Avelorn sin puntos adicionales. Si es así, no podrán llevar armas adicionales que no sean mágicas.\n- No puede tener armadura pesada o armadura de placas completa.\n- Obtiene las reglas especiales Emboscadores, Evasivos, Disparar y huir, Moverse a través de cobertura y Exploradores.",
+        "addSpecialRules": [
+          "Ambushers",
+          "Evasive",
+          "Fire & Flee",
+          "Move through Cover",
+          "Scouts"
+        ]
+      },
+      {
+        "honour": "Anointed Of Asuryan",
+        "honourPoints": 15,
+        "honourDescription": "Un personaje con el honor de Ungido de los Elfos de Asuryan:\n- Puede montarse en un Flamespyre Phoenix o un Frostheart Phoenix (pero no puede elegir ninguna otra opción de montaje).\n- Puede estar equipado con una alabarda ceremonial sin puntos adicionales. Si es así, no podrán llevar armas adicionales que no sean mágicas.\n- Obtiene las reglas especiales Bendiciones de Asuryan, Miedo y Testigo del Destino.\n- Reemplaza la regla especial Valor de las Eras por la regla especial Veterano.",
+        "addSpecialRules": [
+          "Blessings of Asuryan",
+          "Fear",
+          "Witness to Destiny",
+          "Veteran"
+        ]
+      },
+      {
+        "honour": "Blood Of Caledor",
+        "honourPoints": 15,
+        "honourDescription": "Un personaje con el honor élfico de Sangre de Caledor (pero no su montura):\n- Debe montarse en un corcel élfico con barda, un dragón solar, un dragón lunar o un dragón estelar.\n- Tiene un modificador de +1 a su característica Habilidad con armas.\n- Puede estar equipado con armadura de placas completa sin puntos adicionales.\n- Obtiene las reglas especiales Dragon Armor y Impetuous.",
+        "addSpecialRules": [
+          "Dragon Armour",
+          "Impetuous"
+        ]
+      },
+      {
+        "honour": "Chracian Hunter",
+        "honourPoints": 10,
+        "honourDescription": "Un personaje con el honor élfico de Chracian Hunter (pero no su montura):\n- Solo se puede montar en un White Lion Chariot (pero no se puede elegir ninguna otra opción de montura).\n- Puede estar equipado con una gran espada de Cracia sin puntos adicionales. Si es así, no podrán llevar armas adicionales que no sean mágicas.\n- Obtiene las reglas especiales Capa de León, Moverse a través de Cobertura y Obstinado.",
+        "addSpecialRules": [
+          "Lion Cloak",
+          "Move through Cover",
+          "Stubborn"
+        ]
+      },
+      {
+        "honour": "Warden Of Saphery",
+        "honourPoints": 10,
+        "honourDescription": "Un personaje con el honor de Guardián de Saphery Elven:\n- No se puede montar\n- Puede estar equipado con una Espada de Hoeth sin puntos adicionales. Si es así, no podrán llevar armas adicionales que no sean mágicas.\n- Obtiene las reglas especiales Desviar disparos, Armadura Ithilmar y Golpe mortal.",
+        "addSpecialRules": [
+          "Deflect Shots",
+          "Ithilmar Armour",
+          "Killing Blow"
+        ]
+      },
+      {
+        "honour": "Pure Of Heart",
+        "honourPoints": 0,
+        "honourDescription": "A menos que este personaje esté huyendo, todas las unidades amigas dentro de su alcance de Mando pueden usar su característica de Liderazgo en lugar de la suya propia. Además, este personaje y cualquier unidad a la que se haya unido pasan automáticamente cualquier prueba de Pánico que deba realizar.",
+        "addSpecialRules": []
+      },
+      {
+        "honour": "Sea Guard",
+        "honourPoints": 0,
+        "honourDescription": "Un personaje con el honor élfico de la Guardia Marina:\n- Solo se puede montar en un Lothern Skycutter (pero no se puede elegir ninguna otra opción de montaje)\n- Puede estar equipado con un arco de guerra sin puntos adicionales. Si es así, no podrán llevar armas adicionales que no sean mágicas.\n- Obtiene reglas especiales de Disciplina naval y Grito de guerra.",
+        "addSpecialRules": [
+          "Naval Discipline",
+          "Rallying Cry"
         ]
       }
     ]

@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui
+package com.rafaels.warhammertowbuilder.ui.feature.home
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.core.annotation.KoinExperimentalAPI
 
-class MainActivity : ComponentActivity() {
+class HomeActivity : ComponentActivity() {
 
     @OptIn(KoinExperimentalAPI::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    KoinAndroidContext() {
+                    KoinAndroidContext {
                         AppNavigation()
                     }
                 }

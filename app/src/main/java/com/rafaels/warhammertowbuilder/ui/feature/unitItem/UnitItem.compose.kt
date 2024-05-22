@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.unitItem
+package com.rafaels.warhammertowbuilder.ui.feature.unitItem
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,13 +23,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
@@ -40,8 +38,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.rafaels.domain.model.SpecialRuleModel
 import com.rafaels.domain.model.UnitModel
-import com.rafaels.warhammertowbuilder.ui.MainViewModel
-import com.rafaels.warhammertowbuilder.ui.mapImageDrawable
+import com.rafaels.warhammertowbuilder.ui.feature.home.HomeViewModel
+import com.rafaels.warhammertowbuilder.ui.mapper.mapImageDrawable
 import org.koin.androidx.compose.koinViewModel
 
 
@@ -49,9 +47,10 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun ArmyList(
     navController: NavController,
-    mainViewModel: MainViewModel = koinViewModel()
+    text: String?,
+    homeViewModel: HomeViewModel = koinViewModel(),
 ) {
-    val uiState by mainViewModel.uiUnitState.collectAsState()
+    val uiState by homeViewModel.uiUnitState.collectAsState()
 
     Scaffold(
         topBar = {
@@ -61,7 +60,7 @@ fun ArmyList(
                     titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
                 title = {
-                    Text("ArmyList")
+                    Text("ArmyList $text")
                 },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
@@ -77,7 +76,7 @@ fun ArmyList(
             UnitItemColumn(
                 navController = navController,
                 paddingValues = paddingValues,
-                unitModels = uiState.units
+                unitModels = uiState.units.filter { it.unitType.name == text?.uppercase() }
             )
         }
     )

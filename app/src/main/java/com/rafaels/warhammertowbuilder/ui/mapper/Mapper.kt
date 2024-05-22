@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui
+package com.rafaels.warhammertowbuilder.ui.mapper
 
 import com.rafaels.warhammertowbuilder.R
 

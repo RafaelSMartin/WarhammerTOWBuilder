@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.unitItem
+package com.rafaels.warhammertowbuilder.ui.feature.unitItem
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import com.rafaels.warhammertowbuilder.ui.elvenhonourlist.ElvenHonoursFragment
+import com.rafaels.warhammertowbuilder.ui.feature.elvenhonourlist.ElvenHonoursFragment
 import com.rafaels.warhammertowbuilder.ui.theme.WarhammerTOWBuilderTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.core.annotation.KoinExperimentalAPI
@@ -34,7 +34,7 @@ class UnitItemFragment : Fragment() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        KoinAndroidContext() {
+                        KoinAndroidContext {
                             //ArmyList()
                         }
                     }

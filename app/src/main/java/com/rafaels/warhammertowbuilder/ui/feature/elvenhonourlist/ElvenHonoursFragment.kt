@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui.elvenhonourlist
+package com.rafaels.warhammertowbuilder.ui.feature.elvenhonourlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -33,7 +33,7 @@ class ElvenHonoursFragment : Fragment() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        KoinAndroidContext() {
+                        KoinAndroidContext {
                             //ElvenHonoursList()
                         }
 

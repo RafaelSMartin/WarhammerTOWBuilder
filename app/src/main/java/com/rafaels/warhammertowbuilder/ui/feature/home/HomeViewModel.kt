@@ -1,4 +1,4 @@
-package com.rafaels.warhammertowbuilder.ui
+package com.rafaels.warhammertowbuilder.ui.feature.home
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
@@ -10,12 +10,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class MainViewModel(
+class HomeViewModel(
     private val getUnit: GetUnit,
 ) : ViewModel() {
 
-    private val _uiUnitState = MutableStateFlow(MainUiState())
-    val uiUnitState: StateFlow<MainUiState> = _uiUnitState.asStateFlow()
+    private val _uiUnitState = MutableStateFlow(HomeUiState())
+    val uiUnitState: StateFlow<HomeUiState> = _uiUnitState.asStateFlow()
 
     init {
         getUnit()
@@ -26,7 +26,7 @@ class MainViewModel(
             val result = getUnit.getUnit()
             when (result) {
                 is Resource.Success -> {
-                    _uiUnitState.value = MainUiState(
+                    _uiUnitState.value = HomeUiState(
                         units = result.data.unitModels,
                         specialRules = result.data.specialRuleModel,
                         elvenHonours = result.data.elvenHonours
