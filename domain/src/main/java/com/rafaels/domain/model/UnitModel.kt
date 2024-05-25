@@ -7,7 +7,10 @@ data class UnitModels(
     val unitModels: List<UnitModel>,
     val specialRuleModel: List<SpecialRuleModel>,
     val elvenHonours: List<ElvenHonourModel>,
+    val elvenArmoury: List<MagicItemModel>,
+    val magicItems: MagicItemsModel,
 )
+
 data class UnitModel(
     val id: Int,
     val unitType: UnitTypeModel,
@@ -83,4 +86,24 @@ data class ElvenHonourModel(
     val honourPoints: Int,
     val honourDescription: String,
     val addSpecialRules: List<String>
+)
+
+data class MagicItemsModel(
+    val magicWeapons: List<MagicItemModel>,
+    val magicArmour: List<MagicItemModel>,
+    val magicStandards: List<MagicItemModel>,
+    val talismans: List<MagicItemModel>,
+    val enchantedItems: List<MagicItemModel>,
+    val arcaneItems: List<MagicItemModel>,
+)
+
+data class MagicItemModel(
+    val name: String,
+    val point: Int,
+    val range: String? = null,
+    val strength: String? = null,
+    val armourPenetration: Int? = null,
+    val specialRules: List<SpecialRuleModel>? = null,
+    val notes: String? = null,
+    val description: String? = null,
 )

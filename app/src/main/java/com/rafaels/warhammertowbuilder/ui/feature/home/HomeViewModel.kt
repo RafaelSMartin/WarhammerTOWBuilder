@@ -29,7 +29,9 @@ class HomeViewModel(
                     _uiUnitState.value = HomeUiState(
                         units = result.data.unitModels,
                         specialRules = result.data.specialRuleModel,
-                        elvenHonours = result.data.elvenHonours
+                        elvenHonours = result.data.elvenHonours,
+                        elvenArmoury = result.data.elvenArmoury,
+                        magicItems = result.data.magicItems,
                     )
                     Log.d("MainViewModel", "Resource.Success")
                 }

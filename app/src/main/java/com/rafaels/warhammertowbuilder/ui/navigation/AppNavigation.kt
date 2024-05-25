@@ -6,8 +6,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.rafaels.warhammertowbuilder.ui.feature.elvenarmour.ElvenArmourList
 import com.rafaels.warhammertowbuilder.ui.feature.elvenhonourlist.ElvenHonoursList
 import com.rafaels.warhammertowbuilder.ui.feature.home.Home
+import com.rafaels.warhammertowbuilder.ui.feature.magicitem.MagicItemsList
 import com.rafaels.warhammertowbuilder.ui.feature.unitItem.ArmyList
 
 @Composable
@@ -27,6 +29,12 @@ fun AppNavigation() {
         }
         composable(route = AppScreens.ElvenHonourScreen.route) {
             ElvenHonoursList(navController)
+        }
+        composable(route = AppScreens.ElvenArmouryScreen.route) {
+            ElvenArmourList(navController)
+        }
+        composable(route = AppScreens.MagicItemsScreen.route) {
+            MagicItemsList(navController)
         }
 
     }

@@ -1,13 +1,17 @@
 package com.rafaels.data.mapper
 
 import com.rafaels.data.model.ElvenHonoursDTO
+import com.rafaels.data.model.MagicItemDTO
+import com.rafaels.data.model.MagicItemsDTO
 import com.rafaels.data.model.ModelProfileDTO
 import com.rafaels.data.model.OtherModelInfoDTO
+import com.rafaels.data.model.RemoteResponseDTO
 import com.rafaels.data.model.SpecialRulesDTO
 import com.rafaels.data.model.UnitDTO
-import com.rafaels.data.model.RemoteResponseDTO
 import com.rafaels.domain.model.BaseSizeModel
 import com.rafaels.domain.model.ElvenHonourModel
+import com.rafaels.domain.model.MagicItemModel
+import com.rafaels.domain.model.MagicItemsModel
 import com.rafaels.domain.model.ModelProfileModel
 import com.rafaels.domain.model.OtherModelInfoModel
 import com.rafaels.domain.model.SpecialRuleModel
@@ -21,6 +25,8 @@ fun mapUnitModels(response: RemoteResponseDTO): UnitModels {
         unitModels = mapFlatUnits(response).map { it.toUnitModel(response.result.specialRulesDetails) },
         specialRuleModel = response.result.specialRulesDetails.map { it.toSpecialRuleModel() },
         elvenHonours = response.result.elvenHonours.map { it.toElvenHonoursModel() },
+        elvenArmoury = response.result.elvenArmoury.map { it.toMagicItemModel(response.result.specialRulesDetails) },
+        magicItems = response.result.magicItems.toMagicItemModel(response.result.specialRulesDetails),
     )
 }
 
@@ -115,4 +121,27 @@ fun ElvenHonoursDTO.toElvenHonoursModel(): ElvenHonourModel =
         honourDescription = honourDescription,
         addSpecialRules = addSpecialRules
     )
+
+fun MagicItemsDTO.toMagicItemModel(specialRulesDetails: List<SpecialRulesDTO>): MagicItemsModel =
+    MagicItemsModel(
+        magicWeapons = magicWeapons.map { it.toMagicItemModel(specialRulesDetails) },
+        magicArmour = magicArmour.map { it.toMagicItemModel(specialRulesDetails) },
+        magicStandards = magicStandards.map { it.toMagicItemModel(specialRulesDetails) },
+        talismans = talismans.map { it.toMagicItemModel(specialRulesDetails) },
+        enchantedItems = enchantedItems.map { it.toMagicItemModel(specialRulesDetails) },
+        arcaneItems = arcaneItems.map { it.toMagicItemModel(specialRulesDetails) }
+    )
+
+fun MagicItemDTO.toMagicItemModel(specialRulesDetails: List<SpecialRulesDTO>): MagicItemModel =
+    MagicItemModel(
+        name = name,
+        point = point,
+        range = range,
+        strength = strength,
+        armourPenetration = armourPenetration,
+        specialRules = specialRules?.let { specialRulesDetails.toSpecialRulesModel(it) },
+        notes = notes,
+        description = description,
+    )
+
 

@@ -13,6 +13,8 @@ data class ResultDTO(
     val rare: List<UnitDTO>,
     val specialRulesDetails: List<SpecialRulesDTO>,
     val elvenHonours: List<ElvenHonoursDTO>,
+    val elvenArmoury: List<MagicItemDTO>,
+    val magicItems: MagicItemsDTO,
 )
 
 data class UnitDTO(
@@ -56,4 +58,24 @@ data class ElvenHonoursDTO(
     val honourPoints: Int,
     val honourDescription: String,
     val addSpecialRules: List<String>
+)
+
+data class MagicItemsDTO(
+    val magicWeapons: List<MagicItemDTO>,
+    val magicArmour: List<MagicItemDTO>,
+    val magicStandards: List<MagicItemDTO>,
+    val talismans: List<MagicItemDTO>,
+    val enchantedItems: List<MagicItemDTO>,
+    val arcaneItems: List<MagicItemDTO>,
+)
+
+data class MagicItemDTO(
+    val name: String,
+    val point: Int,
+    val range: String?,
+    val strength: String?,
+    val armourPenetration: Int?,
+    val specialRules: List<String>?,
+    val notes: String?,
+    val description: String?,
 )

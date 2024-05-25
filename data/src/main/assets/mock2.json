@@ -648,6 +648,103 @@
         ]
       },
       {
+        "unitName": "Flamespyre Phoenix",
+        "unitType": "Rare",
+        "attributes": {
+          "movement": 2,
+          "weaponSkill": 5,
+          "ballisticSkill": 0,
+          "strength": 5,
+          "toughness": 5,
+          "wounds": 5,
+          "initiative": 4,
+          "attacks": 3,
+          "leadership": 7,
+          "basicPoint": 170
+        },
+        "otherModelInfo": {
+          "troopType": "MonstrousCreature",
+          "baseSize": "50x100",
+          "unitSize": 1
+        },
+        "equipment": "Wicked claws, and blazing plumage (cuenta como armadura pesada)",
+        "options": [],
+        "specialRules": [
+          "Blessings of Asuryan",
+          "Close Order",
+          "Fear",
+          "Flaming Attacks",
+          "Fly(10)",
+          "From the Ashes",
+          "Large Target",
+          "Stomp Attacks (2)",
+          "Swiftstride",
+          "Wake of Fire"
+        ]
+      },
+      {
+        "unitName": "Frostheart Phoenix",
+        "unitType": "Rare",
+        "attributes": {
+          "movement": 2,
+          "weaponSkill": 6,
+          "ballisticSkill": 0,
+          "strength": 6,
+          "toughness": 6,
+          "wounds": 5,
+          "initiative": 3,
+          "attacks": 4,
+          "leadership": 8,
+          "basicPoint": 205
+        },
+        "otherModelInfo": {
+          "troopType": "MonstrousCreature",
+          "baseSize": "50x100",
+          "unitSize": 1
+        },
+        "equipment": "Wicked claws, and frozen plumage (cuenta como armadura de placas)",
+        "options": [],
+        "specialRules": [
+          "Blizzard Area",
+          "Close Order",
+          "Fear",
+          "Fly(9)",
+          "Large Target",
+          "Stomp Attacks (2)",
+          "Swiftstride"
+        ]
+      },
+      {
+        "unitName": "Great Eagles",
+        "unitType": "Rare",
+        "attributes": {
+          "movement": 2,
+          "weaponSkill": 5,
+          "ballisticSkill": 0,
+          "strength": 4,
+          "toughness": 4,
+          "wounds": 3,
+          "initiative": 4,
+          "attacks": 3,
+          "leadership": 6,
+          "basicPoint": 60
+        },
+        "otherModelInfo": {
+          "troopType": "MonstrousCreature",
+          "baseSize": "50x50",
+          "unitSize": 1
+        },
+        "equipment": "Wicked claws and serrated maw",
+        "options": [],
+        "specialRules": [
+          "Close Order",
+          "Fear",
+          "Fly(10)",
+          "Stomp Attacks (1)",
+          "Swiftstride"
+        ]
+      },
+      {
         "unitName": "Eagle-Claw Bolt Throwers",
         "unitType": "Rare",
         "attributes": {
@@ -682,12 +779,24 @@
         "description": "description"
       },
       {
+        "rule": "Armour Bane (1)",
+        "description": "description"
+      },
+      {
+        "rule": "Armour Bane (2)",
+        "description": "description"
+      },
+      {
         "rule": "Arrows of Isha",
         "description": "Cualquier arco (arco largo, arco corto, arco de guerra o Arco de Avelorn) llevado por una miniatura con esta regla especial tiene la regla especial Armor Bane (1) y un atributo Armor Piercing de -1."
       },
       {
         "rule": "Blessings of Asuryan",
         "description": "Un modelo con esta regla especial tiene una salvación de protección de 5+ contra cualquier herida sufrida que haya sido causada por un ataque que tenga la regla especial de ataques flamígeros."
+      },
+      {
+        "rule": "Blizzard Area",
+        "description": "description"
       },
       {
         "rule": "Cleaving Blow",
@@ -730,8 +839,24 @@
         "description": "Uno por turno, cuando esta unidad es declarada objetivo durante la fase de Disparo enemiga, puede optar por Retroceder en Buen Orden y huirá directamente lejos de la unidad enemiga que le dispara. Una vez que esta unidad haya completado su movimiento, la unidad enemiga podrá continuar disparando según lo indicado."
       },
       {
+        "rule": "Extra Attacks (+D3)",
+        "description": "description"
+      },
+      {
         "rule": "Fast Cavalry",
         "description": ""
+      },
+      {
+        "rule": "Flaming Attacks",
+        "description": "description"
+      },
+      {
+        "rule": "Fear",
+        "description": "description"
+      },
+      {
+        "rule": "Fight in Extra Rank",
+        "description": "description"
       },
       {
         "rule": "Fire & Flee",
@@ -744,6 +869,10 @@
       {
         "rule": "Fly(10)",
         "description": "Vuela 10 pulgadas."
+      },
+      {
+        "rule": "From the Ashes",
+        "description": "description"
       },
       {
         "rule": "Ignores Cover",
@@ -806,8 +935,16 @@
         "description": "La tirada de lanzamiento de cualquier hechizo enemigo (incluidos Bound spells) que tenga como objetivo una unidad que incluya una o más miniaturas con esta regla especial sufre un modificador, como se muestra entre paréntesis después del nombre de esta regla especial (se muestra como '-X'). .\nTenga en cuenta que esta regla especial no es acumulativa. Si dos o más miniaturas en una unidad tienen esta regla especial, usa el modificador más alto."
       },
       {
+        "rule": "Magical Attacks",
+        "description": "description"
+      },
+      {
         "rule": "Martial Prowess",
         "description": "Un modelo con esta regla especial puede realizar ataques de apoyo a su flanco o retaguardia, así como a su frente."
+      },
+      {
+        "rule": "Monster Slayer",
+        "description": "description"
       },
       {
         "rule": "Move through Cover",
@@ -834,6 +971,10 @@
         "description": "Description."
       },
       {
+        "rule": "Require Two Hands",
+        "description": "description"
+      },
+      {
         "rule": "Scouts",
         "description": "Description."
       },
@@ -854,6 +995,10 @@
         "description": "Durante la fase de Combate, un modelo con esta regla especial que esté trabado en combate mejora su atributo de Iniciativa a 10 (antes de que se aplique cualquier modificador de orden). Si un modelo tiene esta regla y Golpear el último, las dos reglas se anulan entre sí."
       },
       {
+        "rule": "Strike Last",
+        "description": "description"
+      },
+      {
         "rule": "Stubborn",
         "description": "."
       },
@@ -870,8 +1015,16 @@
         "description": "Una unidad con esta regla especial puede repetir cualquier prueba de Pánico fallida causada por sufrir muchas bajas o por haber sido atravesada por una unidad amiga."
       },
       {
+        "rule": "Volley Fire",
+        "description": "description"
+      },
+      {
         "rule": "Warriors of Nagarythe",
         "description": "A una unidad con esta regla especial solo se le puede unir un personaje con el honor Élfico Acechador de las Sombras."
+      },
+      {
+        "rule": "Wake of Fire",
+        "description": "description"
       },
       {
         "rule": "Warriors of the White Tower",
@@ -960,6 +1113,192 @@
           "Rallying Cry"
         ]
       }
-    ]
+    ],
+    "elvenArmoury": [
+      {
+        "name": "Bow Of Avelorn",
+        "point": 0,
+        "range": "30",
+        "strength": "S",
+        "armourPenetration": null,
+        "specialRules": [
+          "Armour Bane (1)",
+          "Magical Attacks",
+          "Volley Fire"
+        ],
+        "notes": null
+      },
+      {
+        "name": "Ceremonial Halberd",
+        "point": 0,
+        "range": "Combat",
+        "strength": "S+1",
+        "armourPenetration": -1,
+        "specialRules": [
+          "Armour Bane (1)",
+          "Fight in Extra Rank",
+          "Magical Attacks",
+          "Require Two Hands"
+        ],
+        "notes": "Una miniatura que empuña una alabarda ceremonial no puede realizar un ataque de apoyo durante un turno en el que cargó."
+      },
+      {
+        "name": "Chracian Great Blade",
+        "point": 0,
+        "range": "Combat",
+        "strength": "S+2",
+        "armourPenetration": -3,
+        "specialRules": [
+          "Require Two Hands",
+          "Strike Last"
+        ],
+        "notes": null
+      },
+      {
+        "name": "Sword Of Hoeth",
+        "point": 0,
+        "range": "Combat",
+        "strength": "S+2",
+        "armourPenetration": -2,
+        "specialRules": [
+          "Magical Attacks",
+          "Require Two Hands"
+        ],
+        "notes": null
+      }
+    ],
+    "magicItems": {
+      "magicWeapons": [
+          {
+          "name": "The White Sword",
+          "point": 70,
+          "range": "Combat",
+          "strength": "S+3",
+          "armourPenetration": -2,
+          "specialRules": [
+            "Magical Attacks",
+            "Monster Slayer",
+            "Require Two Hands",
+            "Strike Last"
+          ],
+          "notes": "Modelos cuyo tipo de tropa sea solo infantería o carro"
+        },
+        {
+          "name": "The Blade Of Leaping Gold",
+          "point": 50,
+          "range": "Combat",
+          "strength": "S",
+          "armourPenetration": null,
+          "specialRules": [
+            "Armour Bane (2)",
+            "Extra Attacks (+D3)",
+            "Magical Attacks"
+          ],
+          "notes": null
+        },
+        {
+          "name": "Reaver Bow",
+          "point": 40,
+          "range": "30",
+          "strength": "S+1",
+          "armourPenetration": null,
+          "specialRules": [
+            "Magical Attacks"
+          ],
+          "notes": "El Arco Reaver cuenta como un Arco de Avelorn. El portador del Arco Reaver puede realizar un número de ataques de disparo igual a su característica Ataques, en lugar del habitual. Este modelo no sufre ningún modificador por realizar múltiples disparos."
+        },
+        {
+          "name": "Foe Bane",
+          "point": 20,
+          "range": "Combat",
+          "strength": "S",
+          "armourPenetration": null,
+          "specialRules": [
+            "Magical Attacks"
+          ],
+          "notes": "Cuando el portador de Foe bane hace una tirada Para Herir, una tirada de 4+ siempre es un éxito, independientemente de la Resistencia del objetivo."
+        }
+      ],
+      "magicArmour":  [
+        {
+          "name": "Armour Of Caledor",
+          "point": 35,
+          "description": "La Armadura de Caledor es una armadura de placas completa. Además, su portador tiene una salvación de protección de 5+ contra cualquier herida sufrida."
+        },
+        {
+          "name": "Dragon Helm",
+          "point": 10,
+          "description": "Se puede usar con otra armadura. El portador del Yelmo de Dragón mejora su valor de armadura en 1 (hasta un máximo de 2+). Además, su portador tiene una salvación de 6+ contra cualquier herida sufrida que haya sido causada por un ataque que tenga la regla especial Flaming Attacks."
+        }
+      ],
+      "talismans": [
+        {
+          "name": "The Loremaster's Cloak",
+          "point": 25,
+          "description": "El portador de la Capa del Loremaster y cualquier unidad a la que se haya unido tiene una salvación de 4+ contra cualquier herida sufrida que haya sido causada por un Misil Mágico."
+        },
+        {
+          "name": "Opal Amulet *",
+          "point": 20,
+          "description": "De un solo uso. Un amuleto de ópalo le da a su portador una salvación de protección de 2+ contra una sola herida."
+        }
+      ],
+      "magicStandards": [
+        {
+          "name": "Banner Of Arcane Protection",
+          "point": 70,
+          "description": "Una unidad que porta el Estandarte de la Protección Arcana obtiene la regla especial Resistencia Mágica (-3). Además, las unidades amigas a 6\" o menos del modelo que lleva este estandarte obtienen la regla especial Resistencia mágica (-1)."
+        },
+        {
+          "name": "Battle Banner",
+          "point": 60,
+          "description": "Al calcular su resultado de combate, una unidad que lleve el estandarte de batalla puede reclamar una bonificación adicional de +D3 puntos de resultado de combate."
+        },
+        {
+          "name": "Lion Standard",
+          "point": 25,
+          "description": "Una unidad que porta el Estandarte del León supera automáticamente cualquier prueba de Miedo o Terrón que deba realizar."
+        },
+        {
+          "name": "Banner Of Ellyrion",
+          "point": 20,
+          "description": "Una unidad que porta el Estandarte de Ellyrion obtiene la regla especial Moverse a través de Cobertura."
+        }
+      ],
+      "enchantedItems": [
+        {
+          "name": "Null Stone",
+          "point": 75,
+          "description": "Mientras estén dentro del alcance de mando del portador, todos los magos (amigos o enemigos) sufren un modificador de -1 en sus tiradas de lanzamiento y disipación. Además, durante la subfase de Comando de su turno, si no está en combate, este personaje puede intentar usar la Piedra Nula realizando una prueba de Liderazgo (usando su propio Liderazgo no modificado). Si se pasa esta prueba, hasta tu próxima subfase de Inicio de turno, este personaje no puede ser objetivo de ningún hechizo y es inmune a los efectos de cualquier hechizo."
+        },
+        {
+          "name": "The Cloak Of Beards",
+          "point": 30,
+          "description": "El portador del Manto de Barbas provoca Terror. Sin embargo, la capa es tan desconcertante que otras miniaturas no pueden utilizar el Liderazgo del usuario."
+        },
+        {
+          "name": "Seed of Rebirth *",
+          "point": 20,
+          "description": "La Semilla del Renacimiento otorga a su portador la regla especial Regeneración (5+)."
+        }
+      ],
+      "arcaneItems": [
+        {
+          "name": "Sigil Of Asuryan *",
+          "point": 40,
+          "description": "De un solo uso. Un mago puede usar este objeto en lugar de intentar disipar. Si lo hacen, el hechizo se disipa automáticamente sin necesidad de realizar una tirada de Disipar. Tenga en cuenta que una invocación perfecta no se puede disipar."
+        },
+        {
+          "name": "Annulian Crystal",
+          "point": 30,
+          "description": "Una vez por turno, al lanzar con éxito un hechizo, el portador del Cristal Anuliano puede optar por olvidar ese hechizo e inmediatamente generar otro (sin incluir los hechizos característicos) de la manera habitual. Tenga en cuenta que es posible que el Mago genere el hechizo que acaba de olvidar o uno olvidado en un turno anterior. Considérelo destino."
+        },
+        {
+          "name": "Sylvery Wand",
+          "point": 15,
+          "description": "El portador de la Varita Plateada conoce un hechizo más (elegido de la forma habitual) de lo normal para su Nivel de Hechicería. Tenga en cuenta que esto no aumenta el nivel del mago."
+        }
+      ]
+    }
   }
 }

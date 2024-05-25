@@ -67,9 +67,14 @@ private fun BodyContent(navController: NavController, paddingValues: PaddingValu
         Button(onClick = { navController.navigate(route = AppScreens.UnitScreen.route + "/Rare") }) {
             Text(text = "Rare")
         }
-
         Button(onClick = { navController.navigate(route = AppScreens.ElvenHonourScreen.route) }) {
             Text(text = "Elven Honours")
+        }
+        Button(onClick = { navController.navigate(route = AppScreens.ElvenArmouryScreen.route) }) {
+            Text(text = "Elven Armoury")
+        }
+        Button(onClick = { navController.navigate(route = AppScreens.MagicItemsScreen.route) }) {
+            Text(text = "Magic Items")
         }
     }
 }
